@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff--primary:"Trirong", serif;
+    --ff--secondary: 'Source Code pro', 'monospace';
+
+    --fw-reg: 300;
+    --fw-bold: 800;
+
+    --clr-light: white;
+    --clr-dark: rgba(0, 0, 0, 0.849);
+    --clr-main: rgba(129, 187, 235, 0.849);
+
+    --fs-h1: 2em;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-boby: 1.1rem;
+}
+
+@media (min-width: 1000px) {
+:root {
+    --fs-h1: 3.5rem;
+    --fs-h2: 3.25rem;
+    --fs-h3: 1.5rem;
+    --fs-boby: 1.2rem;
+    }
+}
+
+body {
+    background-color: var(--clr-main);
+}
+
+#myVideo {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    opacity: 0.8;
+  }
+
+.section {
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    font-family: var(--ff--primary);
+    font-size: var(--fs-boby);
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section .section__intro {
+    background-color: var(--clr-dark);
+    min-height: 100vh;
+    width: 70%;
+    transform: skewX(-15deg);
+    padding-top: 10em;
+    text-align: left;
+}
+
+span {
+    color: yellow;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.section .section__mediaLinks {
+    height: 100vh;
+    width: 30%;
+    float: right;
+}
+
+.section__intro__content {
+    height: fit-content;
+    margin-top: -10em;
+    width: 90%;
+    margin: auto;
+    transform: skewX(15deg);
+}
+
+.section__intro__content--header {
+    font-size: var(--fs-h1);
+    color: var(--clr-light);
+    background-color: red;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    text-align: left;
+    font-family: var(--ff--primary);
+}
+
+.section__intro__content-p {
+    padding: 5px;
+}
+
+.section__intro__content--input {
+    padding: 20px;
+    width: 100%;
+}
+
+.section__intro__content--input input {
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    
+}
+
+.section__intro__content--input button {
+    width: 25%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--clr-main);
+    color: var(--clr-light);
+    font-weight: var(--fw-reg);
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+
+.section__intro__content--input button:hover {
+    background-color: rgba(255, 0, 0, 0.521);
+    scale: 1.05;
+}
+
+.section__mediaLinks__links {
+    width: 15vh;
+    height: inherit;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+    
+}
+
+.section__mediaLinks__links--icons {
+    height: 40vh;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content:space-between;
+
+}
+
+.section__mediaLinks__links--icons a {
+    text-decoration: none;
+    font-size: var(--fs-h3);
+    color: var(--clr-light);
+    margin: auto;
+}
+
+.fa {
+    padding: 15px;
+    font-size: var(--fs-h3);
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    z-index: 100;
+  }
+
+  .fa-facebook, .fa-google, .fa-twitter {
+    background: #000;
+    color: var(--clr-light);
+  }
+  
+
+@media screen and (max-width: 1000px) {
+    .section .section__intro {
+       min-height: 40vh;
+        width: 100%;
+        transform: skewX(0);
+        padding-top: 50px;
+        padding: 10px;
+    }
+
+    #myVideo {
+        position: fixed;
+        top:0;
+        left: -50em;
+    }
+
+    .section {
+        display: inline-block;
+        
+    }
+
+    .section .section__mediaLinks {
+        height: 60vh;
+        width: 100%;
+        float: none;
+    }
+
+    .section__intro__content {
+        transform: skewX(0deg);
+        width: fit-content;
+        margin-top: 15px ;
+    }
+
+    .section__mediaLinks__links {
+        width: 100%;
+        height: 10vh;
+        justify-content: center;
+
+        
+    }
+
+    .section__mediaLinks__links--icons {
+        height: inherit;
+        flex-direction: row;
+
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .section__mediaLinks__links--icons {
+        height: inherit;
+        width: 80%;
+        flex-direction: row;
+
+    }
+}
+
+    @media screen and (max-width:330px) {
+        .section__intro__content--input input {
+            width: 90%;
+            height: 30px;
+        }
+        
+        .section__intro__content--input button {
+            width: 90%;
+            height: 30px;
+        }
+    }
+
