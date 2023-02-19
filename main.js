@@ -1,4 +1,4 @@
-alert("Hi there, Please note that our side is currently under maintainance, some functions are disabled, Thank you. Click ok to continue");
+alert("Hi there, Please note that our site is currently under maintainance, some functions are disabled, Thank you. Click ok to continue");
 
 
 let slideIndex = 0;
